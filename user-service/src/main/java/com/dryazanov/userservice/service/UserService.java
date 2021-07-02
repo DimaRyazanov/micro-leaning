@@ -33,7 +33,7 @@ public class UserService {
 
         if (user != null) {
             Department department = restTemplate.getForObject(
-                    "http://localhost:9001/departments/" + user.getDepartmentId(), Department.class);
+                    "http://DEPARTMENT-SERVICE/departments/" + user.getDepartmentId(), Department.class);
             userWithDepartment.setDepartment(department);
         }
 
